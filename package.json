@@ -1,0 +1,14 @@
+{
+  "name": "projet_4_ohmyfood",
+  "version": "1.0.0",
+  "description": "projet 4 de la formation Intégrateur web OpenClassrooms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonathan Vigier",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.60.0"
+  }
+}
