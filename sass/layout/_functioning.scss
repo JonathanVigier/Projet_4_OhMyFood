@@ -75,3 +75,25 @@
         }
     }
 }
+
+@media screen and (min-width: 1024px) {
+
+    .functioning {
+        height: auto;
+
+        h2 {
+            margin-left: 160px;
+        }
+
+        .functioning-content {
+            flex-direction: row;
+            justify-content: center;
+            gap: 40px;
+
+            button {
+                width: 322px;
+            }
+        }
+    }
+
+}
