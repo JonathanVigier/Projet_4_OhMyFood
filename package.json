@@ -6,6 +6,10 @@
   "scripts": {
     "sass": "sass --watch ./sass/main.scss style.css"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonathanVigier/Projet_4_OhMyFood.git"
+  },
   "author": "Jonathan Vigier",
   "license": "ISC",
   "devDependencies": {
