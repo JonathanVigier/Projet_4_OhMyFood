@@ -1,0 +1,22 @@
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 63px;
+    gap: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 162px;
+            height: 44px;
+            object-fit: contain;
+        }
+    }
+}
