@@ -1,0 +1,37 @@
+footer {
+    height: 197px;
+    padding: 22px 0 33px 25px;
+    background: #353535;
+
+    h4 {
+        font-family: $title;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        color: white;
+        margin: 0 0 16px 0;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+
+        li {
+            list-style-type: none;
+
+            a,
+            a:visited {
+                @include button-text;
+                color: white !important;
+            }
+
+            i {
+                font-family: serif;
+                font-size: 12px;
+                width: 12px;
+                margin-right: 5px;
+            }
+        }
+    }
+}

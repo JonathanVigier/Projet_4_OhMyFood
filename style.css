@@ -301,4 +301,39 @@ header nav img {
   transform: scale(0.86, 0.9);
 }
 
+footer {
+  height: 197px;
+  padding: 22px 0 33px 25px;
+  background: #353535;
+}
+footer h4 {
+  font-family: "title", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: white;
+  margin: 0 0 16px 0;
+}
+footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+footer ul li {
+  list-style-type: none;
+}
+footer ul li a,
+footer ul li a:visited {
+  font-family: "text-500", serif;
+  font-size: 16px;
+  line-height: 19px;
+  color: white !important;
+}
+footer ul li i {
+  font-family: serif;
+  font-size: 12px;
+  width: 12px;
+  margin-right: 5px;
+}
+
 /*# sourceMappingURL=style.css.map */
