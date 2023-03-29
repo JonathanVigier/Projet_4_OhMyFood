@@ -58,4 +58,69 @@ header nav img {
   object-fit: contain;
 }
 
+.research {
+  height: 347px;
+}
+.research form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background: #EAEAEA;
+  z-index: 1;
+}
+.research form input[type=text] {
+  font-family: "text-500", serif;
+  font-size: 16px;
+  line-height: 19px;
+  width: 145px;
+  border: none;
+  background: transparent;
+  text-align: center;
+}
+.research form input[type=text]:focus-visible {
+  outline: none;
+  border-bottom: 1px solid black;
+}
+.research .research-content {
+  display: grid;
+  grid-template-rows: 107px 47px 1fr;
+  height: 287px;
+}
+.research .research-content h1 {
+  justify-self: center;
+  align-self: end;
+  width: 73%;
+  height: 68px;
+  font-family: "text-700", serif;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+}
+.research .research-content p {
+  font-family: "text-300", serif;
+  font-size: 18px;
+  line-height: 21px;
+  justify-self: center;
+  width: 84%;
+  color: #353535;
+  text-align: center;
+}
+.research .research-content button {
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  width: 58%;
+  height: 50px;
+  align-self: center;
+  justify-self: center;
+  color: white;
+  border: none;
+  transition: background 0.6s ease-in-out;
+  cursor: pointer;
+}
+.research .research-content button:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+}
+
 /*# sourceMappingURL=style.css.map */
