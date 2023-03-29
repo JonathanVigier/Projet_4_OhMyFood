@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    width: 100vw;
+    max-width: 1440px;
+    min-height: 100vh;
+}
+
+a,
+a:visited {
+    color: black;
+    text-decoration: none;
+}
