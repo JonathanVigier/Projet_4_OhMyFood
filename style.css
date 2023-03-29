@@ -123,4 +123,182 @@ header nav img {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
 }
 
+.functioning {
+  display: flex;
+  flex-direction: column;
+  height: 440px;
+  padding: 48px 20px 68px 20px;
+  gap: 26px;
+}
+.functioning h2 {
+  font-family: "text-700", serif;
+  font-size: 24px;
+  line-height: 28px;
+}
+.functioning .functioning-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-left: 12px;
+}
+.functioning .functioning-content button {
+  position: relative;
+  display: flex;
+  font-family: "text-500", serif;
+  font-size: 16px;
+  line-height: 19px;
+  height: 73px;
+  padding: 29px 38px 28px 34px;
+  background: #F6F6F6;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.functioning .functioning-content button::before {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: #9356DC;
+  color: #F6F6F6;
+  font-size: 14px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.functioning .functioning-content button:nth-child(0n+1)::before {
+  content: "1";
+}
+.functioning .functioning-content button:nth-child(0n+2)::before {
+  content: "2";
+}
+.functioning .functioning-content button:nth-child(0n+3)::before {
+  content: "3";
+}
+.functioning .functioning-content button:hover {
+  background: #F5EDFF;
+}
+.functioning .functioning-content button:hover i {
+  color: #9356DC;
+}
+.functioning .functioning-content button i {
+  margin-right: 23px;
+  color: #7E7E7E;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  background: #F6F6F6;
+  padding: 54px 20px 64px 20px;
+  user-select: none;
+}
+.restaurants h2 {
+  font-family: "text-700", serif;
+  font-size: 24px;
+  line-height: 28px;
+}
+.restaurants .restaurants-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.restaurants .restaurants-content .card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 251px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.restaurants .restaurants-content .card:nth-child(0n+1), .restaurants .restaurants-content .card:nth-child(0n+2) {
+  position: relative;
+}
+.restaurants .restaurants-content .card:nth-child(0n+1)::after, .restaurants .restaurants-content .card:nth-child(0n+2)::after {
+  position: absolute;
+  content: "Nouveau";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 29px;
+  right: 15px;
+  top: 15px;
+  color: #008766;
+  background: #99E2D0;
+  font-family: "text-500", serif;
+  border-radius: 2px;
+}
+.restaurants .restaurants-content .card .img-container {
+  position: relative;
+  width: 100%;
+  height: 174px;
+  border-radius: 15px 15px 0 0;
+  overflow: hidden;
+}
+.restaurants .restaurants-content .card .img-container img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  object-fit: cover;
+}
+.restaurants .restaurants-content .card .img-container #img-2 {
+  bottom: -58%;
+}
+.restaurants .restaurants-content .card .card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 25px 12px 13px;
+}
+.restaurants .restaurants-content .card .card-content .heart-container {
+  position: relative;
+}
+.restaurants .restaurants-content .card .card-content .heart-container input[type=checkbox] {
+  clear: both;
+  display: none;
+}
+.restaurants .restaurants-content .card .card-content .heart-container label {
+  position: relative;
+  display: grid;
+  width: 21px;
+  height: 22px;
+  cursor: pointer;
+}
+.restaurants .restaurants-content .card .card-content .heart-container label .fa-regular {
+  position: absolute;
+  z-index: 2;
+  font-size: 22px;
+}
+.restaurants .restaurants-content .card .card-content .heart-container label .fa-solid {
+  position: absolute;
+  z-index: 1;
+  font-size: 22px;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  transform: scale(0);
+  transition: 0.6s ease-in-out;
+}
+.restaurants .restaurants-content .card .card-content .heart-container input[type=checkbox]:checked + label .fa-solid {
+  font-size: 22px;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  transform: scale(0.86, 0.9);
+}
+
 /*# sourceMappingURL=style.css.map */

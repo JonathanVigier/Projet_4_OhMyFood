@@ -1,0 +1,77 @@
+.functioning {
+    display: flex;
+    flex-direction: column;
+    height: 440px;
+    padding: 48px 20px 68px 20px;
+    gap: 26px;
+
+    h2 {
+        font-family: $text700;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .functioning-content {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding-left: 12px;
+
+        button {
+            position: relative;
+            display: flex;
+            @include button-text;
+            height: 73px;
+            padding: 29px 38px 28px 34px;
+            background: #F6F6F6;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+            transition: .3s ease-in-out;
+            cursor: pointer;
+
+            &::before {
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                content: '';
+                width: 24px;
+                height: 24px;
+                background: #9356DC;
+                color: #F6F6F6;
+                font-size: 14px;
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &:nth-child(0n+1)::before {
+                content: '1';
+            }
+
+            &:nth-child(0n+2)::before {
+                content: '2';
+            }
+
+            &:nth-child(0n+3)::before {
+                content: '3';
+            }
+
+            &:hover {
+                background: #F5EDFF;
+
+                i {
+                    color: #9356DC;
+                }
+            }
+
+            i {
+                margin-right: 23px;
+                color: #7E7E7E;
+            }
+        }
+    }
+}
