@@ -4,7 +4,7 @@
   "description": "projet 4 de la formation Intégrateur web OpenClassrooms",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass --watch ./sass/main.scss style.css"
   },
   "author": "Jonathan Vigier",
   "license": "ISC",
