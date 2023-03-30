@@ -36,7 +36,8 @@
             align-self: end;
             width: 73%;
             height: 68px;
-            font-family: $text700;
+            font-family: 'Schrickhand', cursive;
+            font-weight: 700;
             font-size: 24px;
             line-height: 28px;
             text-align: center;
@@ -58,7 +59,8 @@
 
             button {
                 @include btn;
-                font-family: $text500;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 500;
                 font-size: 16px;
                 color: white;
                 width: 100%;
