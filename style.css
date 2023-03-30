@@ -94,7 +94,7 @@ header nav img {
   align-self: end;
   width: 73%;
   height: 68px;
-  font-family: "Schrickhand", cursive;
+  font-family: "title", cursive;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -207,9 +207,6 @@ header nav img {
   .functioning {
     height: auto;
   }
-  .functioning h2 {
-    margin-left: 160px;
-  }
   .functioning .functioning-content {
     flex-direction: row;
     justify-content: center;
@@ -217,6 +214,11 @@ header nav img {
   }
   .functioning .functioning-content button {
     width: 322px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .functioning h2 {
+    margin-left: 10rem;
   }
 }
 .restaurants {
@@ -274,13 +276,10 @@ header nav img {
   overflow: hidden;
 }
 .restaurants .restaurants-content .card .img-container img {
-  position: absolute;
-  bottom: 0;
   width: 100%;
+  height: 100%;
   object-fit: cover;
-}
-.restaurants .restaurants-content .card .img-container #img-2 {
-  bottom: -58%;
+  object-position: 0% 60%;
 }
 .restaurants .restaurants-content .card .card-content {
   display: flex;
@@ -328,28 +327,29 @@ header nav img {
   transform: scale(0.86, 0.9);
 }
 
-/*  Media query Tablette (max-width: 768px) */
+/*  Media query Tablette (min-width: 768px) */
 @media screen and (min-width: 768px) {
   .restaurants {
     padding: 54px 20px 64px 20px;
   }
   .restaurants .restaurants-content {
     display: grid;
-    gap: 50px;
+    justify-items: center;
+    row-gap: 50px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+  }
+  .restaurants .restaurants-content .card:nth-child(0n+3) .img-container img, .restaurants .restaurants-content .card:nth-child(0n+4) .img-container img {
+    object-position: 0% 80%;
   }
 }
-/*  Media query Desktop (min-width: 1440px) */
+/* Media query Desktop (min-width: 1440px) */
 @media screen and (min-width: 1440px) {
-  .restaurants {
-    padding: 54px 20px 64px 170px;
+  .restaurants h2 {
+    padding: 0 0 0 10rem;
   }
   .restaurants .restaurants-content {
-    display: grid;
-    gap: 50px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    padding: 0 180px 0 180px;
   }
 }
 footer {
@@ -614,7 +614,7 @@ footer ul li i {
 .menu .desserts .menu-item-container .menu-item-starters span,
 .menu .desserts .menu-item-container .menu-item-main-courses span,
 .menu .desserts .menu-item-container .menu-item-desserts span {
-  font-family: "Schickhand", cursive;
+  font-family: "title", cursive;
   font-weight: 700;
   font-size: 15px;
   line-height: 18px;
