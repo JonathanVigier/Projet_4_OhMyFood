@@ -1,0 +1,110 @@
+.loader {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    z-index: 10;
+    // animation: loaderAnim 2.5s 1.5s forwards;
+
+    &::after {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 3px;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%);
+        background: black;
+        animation: lineAnim 1.5s ease-in forwards;
+    }
+
+    svg {
+        path {
+            stroke-dasharray: 180px;
+            stroke-dashoffset: 180px;
+            animation: pathAnim 2.5s forwards;
+
+            &:nth-child(0n+3) {
+                stroke: #9356DC;
+                animation: pathAnim 1.5s forwards;
+            }
+        }
+    }
+
+    p {
+        position: relative;
+        opacity: 0;
+        font-family: $text500;
+        animation: textLoaderAnim 2s forwards;
+
+    }
+
+}
+
+/* Media query Tablet (min-width: 768px) */
+
+@media screen and (min-width: 768px) {
+    .loader {
+        gap: 15px;
+
+        &::after {
+            top: 70%;
+        }
+
+        svg {
+            height: 20vh;
+        }
+
+        p {
+            font-size: 26px;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .loader {
+
+        &::after {
+            top: 75%;
+        }
+
+        svg {
+            height: 35vh;
+        }
+
+        p {
+            font-size: 42px;
+        }
+    }
+}
+
+@keyframes loaderAnim {
+    to {
+        visibility: collapse;
+        opacity: 0;
+    }
+}
+
+@keyframes pathAnim {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes textLoaderAnim {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes lineAnim {
+    to {
+        width: 65vw;
+    }
+}
