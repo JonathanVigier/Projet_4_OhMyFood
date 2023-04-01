@@ -57,6 +57,7 @@ a:visited {
   height: 100vh;
   background: white;
   z-index: 10;
+  animation: loaderAnim 2.5s 1.5s forwards;
 }
 .loader::after {
   position: absolute;
@@ -100,6 +101,7 @@ a:visited {
     font-size: 26px;
   }
 }
+/* Media query Desktop (min-width: 1440px) */
 @media screen and (min-width: 1440px) {
   .loader::after {
     top: 75%;
