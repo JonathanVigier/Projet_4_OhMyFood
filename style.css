@@ -699,7 +699,7 @@ footer ul li i {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 200px;
+  width: 125px;
 }
 .menu .starters .menu-item-container .menu-item-starters .item-infos p,
 .menu .starters .menu-item-container .menu-item-main-courses .item-infos p,
@@ -716,7 +716,7 @@ footer ul li i {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 200px;
+  width: 125px;
 }
 .menu .starters .menu-item-container .menu-item-starters span,
 .menu .starters .menu-item-container .menu-item-main-courses span,
