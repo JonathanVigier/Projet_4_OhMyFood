@@ -5,8 +5,6 @@
 }
 
 body {
-  min-width: 320px;
-  width: 100vw;
   max-width: 1440px;
   min-height: 100vh;
   margin: 0 auto;
@@ -53,7 +51,7 @@ a:visited {
   align-items: center;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: white;
   z-index: 10;
@@ -196,6 +194,11 @@ header nav img {
   line-height: 28px;
   text-align: center;
 }
+@media screen and (max-width: 768px) {
+  .research .research-content h1 {
+    font-size: 20px;
+  }
+}
 .research .research-content p {
   font-family: "text-300", serif;
   font-size: 18px;
@@ -204,6 +207,11 @@ header nav img {
   width: 84%;
   color: #353535;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .research .research-content p {
+    font-size: 14px;
+  }
 }
 .research .research-content a {
   align-self: center;
@@ -299,6 +307,11 @@ header nav img {
   color: #7E7E7E;
 }
 
+@media screen and (max-width: 768px) {
+  .functioning .functioning-content button {
+    align-items: center;
+  }
+}
 @media screen and (min-width: 1024px) {
   .functioning {
     height: auto;
@@ -506,6 +519,11 @@ footer ul li i {
   padding: 0 0 0 23px;
   gap: 65px;
 }
+@media screen and (max-width: 768px) {
+  .nav {
+    gap: 30%;
+  }
+}
 .nav a i {
   font-size: 17px;
 }
@@ -529,7 +547,6 @@ footer ul li i {
   gap: 40px;
   position: relative;
   margin-top: -40px;
-  width: 100vw;
   max-width: 1055px;
   padding: 32px 0 40px 0;
   background: #F7F7F7;
@@ -804,6 +821,15 @@ footer ul li i {
 @keyframes menuAnim {
   to {
     opacity: 1;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu {
+    margin-top: -12vh;
+  }
+  .menu .menu-section .menu-title {
+    justify-content: center;
+    gap: 10%;
   }
 }
 /*  Media query Desktop (min-width: 1024px) */

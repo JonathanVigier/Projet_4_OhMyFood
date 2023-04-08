@@ -3,6 +3,10 @@
     padding: 0 0 0 23px;
     gap: 65px;
 
+    @media screen and (max-width: 768px) {
+        gap: 30%;
+    }
+
     a {
         i {
             font-size: 17px;
@@ -30,7 +34,6 @@
     gap: 40px;
     position: relative;
     margin-top: -40px;
-    width: 100vw;
     max-width: 1055px;
     padding: 32px 0 40px 0;
     background: #F7F7F7;
@@ -254,6 +257,19 @@
 @keyframes menuAnim {
     to {
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        margin-top: -12vh;
+
+        .menu-section {
+            .menu-title {
+                justify-content: center;
+                gap: 10%;
+            }
+        }
     }
 }
 

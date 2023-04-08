@@ -76,6 +76,16 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .functioning {
+        .functioning-content {
+            button {
+                align-items: center;
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 1024px) {
 
     .functioning {
@@ -89,6 +99,7 @@
 
             button {
                 width: 322px;
+
             }
         }
     }
