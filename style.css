@@ -420,40 +420,20 @@ header nav img {
 .restaurants .restaurants-content .card .card-content .heart-container {
   position: relative;
 }
-.restaurants .restaurants-content .card .card-content .heart-container input[type=checkbox] {
-  clear: both;
+.restaurants .restaurants-content .card .card-content .heart-container:hover .heart-empty {
   display: none;
 }
-.restaurants .restaurants-content .card .card-content .heart-container label {
-  position: relative;
-  display: grid;
-  width: 21px;
-  height: 22px;
-  cursor: pointer;
+.restaurants .restaurants-content .card .card-content .heart-container:hover .heart-full {
+  display: block;
 }
-.restaurants .restaurants-content .card .card-content .heart-container label .fa-regular {
-  position: absolute;
-  z-index: 2;
-  font-size: 22px;
+.restaurants .restaurants-content .card .card-content .heart-container:hover .heart-full img {
+  width: 1.45rem;
 }
-.restaurants .restaurants-content .card .card-content .heart-container label .fa-solid {
-  position: absolute;
-  z-index: 1;
-  font-size: 22px;
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-  transform: scale(0);
-  transition: 0.6s ease-in-out;
+.restaurants .restaurants-content .card .card-content .heart-container .heart-empty {
+  font-size: 1.4rem;
 }
-.restaurants .restaurants-content .card .card-content .heart-container input[type=checkbox]:checked + label .fa-solid {
-  font-size: 22px;
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-  transform: scale(0.86, 0.9);
+.restaurants .restaurants-content .card .card-content .heart-container .heart-full {
+  display: none;
 }
 
 /*  Media query Tablette (min-width: 768px) */
@@ -593,60 +573,44 @@ footer ul li i {
 .menu .menu-section .menu-title .heart-container {
   position: relative;
 }
-.menu .menu-section .menu-title .heart-container input[type=checkbox] {
-  clear: both;
+.menu .menu-section .menu-title .heart-container:hover .heart-empty {
   display: none;
 }
-.menu .menu-section .menu-title .heart-container label {
-  position: relative;
-  display: grid;
-  width: 21px;
-  height: 22px;
-  cursor: pointer;
+.menu .menu-section .menu-title .heart-container:hover .heart-full {
+  display: block;
 }
-.menu .menu-section .menu-title .heart-container label .fa-regular {
-  position: absolute;
-  z-index: 2;
-  font-size: 25px;
+.menu .menu-section .menu-title .heart-container:hover .heart-full img {
+  width: 1.45rem;
 }
-.menu .menu-section .menu-title .heart-container label .fa-solid {
-  position: absolute;
-  z-index: 1;
-  font-size: 25px;
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-  transform: scale(0);
-  transition: 0.6s ease-in-out;
+.menu .menu-section .menu-title .heart-container .heart-empty {
+  font-size: 1.4rem;
 }
-.menu .menu-section .menu-title .heart-container input[type=checkbox]:checked + label .fa-solid {
-  font-size: 25px;
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-  transform: scale(0.86, 0.9);
+.menu .menu-section .menu-title .heart-container .heart-full {
+  display: none;
 }
-.menu .starters {
+
+.starters {
   animation: menuAnim 2s 1s ease forwards;
 }
-.menu .main-courses {
+
+.main-courses {
   animation: menuAnim 2s 2.5s ease forwards;
 }
-.menu .desserts {
+
+.desserts {
   animation: menuAnim 2s 4s ease forwards;
 }
-.menu .starters,
-.menu .main-courses,
-.menu .desserts {
+
+.starters,
+.main-courses,
+.desserts {
   display: grid;
   gap: 20px;
   opacity: 0;
 }
-.menu .starters h2,
-.menu .main-courses h2,
-.menu .desserts h2 {
+.starters h2,
+.main-courses h2,
+.desserts h2 {
   position: relative;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -655,9 +619,9 @@ footer ul li i {
   line-height: 19px;
   text-transform: uppercase;
 }
-.menu .starters h2::after,
-.menu .main-courses h2::after,
-.menu .desserts h2::after {
+.starters h2::after,
+.main-courses h2::after,
+.desserts h2::after {
   position: absolute;
   content: "";
   bottom: -10px;
@@ -666,21 +630,21 @@ footer ul li i {
   height: 3px;
   background: #99E2D0;
 }
-.menu .starters .menu-item-container,
-.menu .main-courses .menu-item-container,
-.menu .desserts .menu-item-container {
+.starters .menu-item-container,
+.main-courses .menu-item-container,
+.desserts .menu-item-container {
   display: grid;
   gap: 12px;
 }
-.menu .starters .menu-item-container .menu-item-starters,
-.menu .starters .menu-item-container .menu-item-main-courses,
-.menu .starters .menu-item-container .menu-item-desserts,
-.menu .main-courses .menu-item-container .menu-item-starters,
-.menu .main-courses .menu-item-container .menu-item-main-courses,
-.menu .main-courses .menu-item-container .menu-item-desserts,
-.menu .desserts .menu-item-container .menu-item-starters,
-.menu .desserts .menu-item-container .menu-item-main-courses,
-.menu .desserts .menu-item-container .menu-item-desserts {
+.starters .menu-item-container .menu-item-starters,
+.starters .menu-item-container .menu-item-main-courses,
+.starters .menu-item-container .menu-item-desserts,
+.main-courses .menu-item-container .menu-item-starters,
+.main-courses .menu-item-container .menu-item-main-courses,
+.main-courses .menu-item-container .menu-item-desserts,
+.desserts .menu-item-container .menu-item-starters,
+.desserts .menu-item-container .menu-item-main-courses,
+.desserts .menu-item-container .menu-item-desserts {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -691,27 +655,27 @@ footer ul li i {
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
-.menu .starters .menu-item-container .menu-item-starters .item-infos,
-.menu .starters .menu-item-container .menu-item-main-courses .item-infos,
-.menu .starters .menu-item-container .menu-item-desserts .item-infos,
-.menu .main-courses .menu-item-container .menu-item-starters .item-infos,
-.menu .main-courses .menu-item-container .menu-item-main-courses .item-infos,
-.menu .main-courses .menu-item-container .menu-item-desserts .item-infos,
-.menu .desserts .menu-item-container .menu-item-starters .item-infos,
-.menu .desserts .menu-item-container .menu-item-main-courses .item-infos,
-.menu .desserts .menu-item-container .menu-item-desserts .item-infos {
+.starters .menu-item-container .menu-item-starters .item-infos,
+.starters .menu-item-container .menu-item-main-courses .item-infos,
+.starters .menu-item-container .menu-item-desserts .item-infos,
+.main-courses .menu-item-container .menu-item-starters .item-infos,
+.main-courses .menu-item-container .menu-item-main-courses .item-infos,
+.main-courses .menu-item-container .menu-item-desserts .item-infos,
+.desserts .menu-item-container .menu-item-starters .item-infos,
+.desserts .menu-item-container .menu-item-main-courses .item-infos,
+.desserts .menu-item-container .menu-item-desserts .item-infos {
   display: grid;
   gap: 6px;
 }
-.menu .starters .menu-item-container .menu-item-starters .item-infos h3,
-.menu .starters .menu-item-container .menu-item-main-courses .item-infos h3,
-.menu .starters .menu-item-container .menu-item-desserts .item-infos h3,
-.menu .main-courses .menu-item-container .menu-item-starters .item-infos h3,
-.menu .main-courses .menu-item-container .menu-item-main-courses .item-infos h3,
-.menu .main-courses .menu-item-container .menu-item-desserts .item-infos h3,
-.menu .desserts .menu-item-container .menu-item-starters .item-infos h3,
-.menu .desserts .menu-item-container .menu-item-main-courses .item-infos h3,
-.menu .desserts .menu-item-container .menu-item-desserts .item-infos h3 {
+.starters .menu-item-container .menu-item-starters .item-infos h3,
+.starters .menu-item-container .menu-item-main-courses .item-infos h3,
+.starters .menu-item-container .menu-item-desserts .item-infos h3,
+.main-courses .menu-item-container .menu-item-starters .item-infos h3,
+.main-courses .menu-item-container .menu-item-main-courses .item-infos h3,
+.main-courses .menu-item-container .menu-item-desserts .item-infos h3,
+.desserts .menu-item-container .menu-item-starters .item-infos h3,
+.desserts .menu-item-container .menu-item-main-courses .item-infos h3,
+.desserts .menu-item-container .menu-item-desserts .item-infos h3 {
   font-family: "text-500", serif;
   font-size: 18px;
   line-height: 21px;
@@ -721,15 +685,15 @@ footer ul li i {
   overflow: hidden;
   width: 125px;
 }
-.menu .starters .menu-item-container .menu-item-starters .item-infos p,
-.menu .starters .menu-item-container .menu-item-main-courses .item-infos p,
-.menu .starters .menu-item-container .menu-item-desserts .item-infos p,
-.menu .main-courses .menu-item-container .menu-item-starters .item-infos p,
-.menu .main-courses .menu-item-container .menu-item-main-courses .item-infos p,
-.menu .main-courses .menu-item-container .menu-item-desserts .item-infos p,
-.menu .desserts .menu-item-container .menu-item-starters .item-infos p,
-.menu .desserts .menu-item-container .menu-item-main-courses .item-infos p,
-.menu .desserts .menu-item-container .menu-item-desserts .item-infos p {
+.starters .menu-item-container .menu-item-starters .item-infos p,
+.starters .menu-item-container .menu-item-main-courses .item-infos p,
+.starters .menu-item-container .menu-item-desserts .item-infos p,
+.main-courses .menu-item-container .menu-item-starters .item-infos p,
+.main-courses .menu-item-container .menu-item-main-courses .item-infos p,
+.main-courses .menu-item-container .menu-item-desserts .item-infos p,
+.desserts .menu-item-container .menu-item-starters .item-infos p,
+.desserts .menu-item-container .menu-item-main-courses .item-infos p,
+.desserts .menu-item-container .menu-item-desserts .item-infos p {
   font-family: "text-300", serif;
   font-size: 15px;
   line-height: 18px;
@@ -738,15 +702,15 @@ footer ul li i {
   overflow: hidden;
   width: 125px;
 }
-.menu .starters .menu-item-container .menu-item-starters span,
-.menu .starters .menu-item-container .menu-item-main-courses span,
-.menu .starters .menu-item-container .menu-item-desserts span,
-.menu .main-courses .menu-item-container .menu-item-starters span,
-.menu .main-courses .menu-item-container .menu-item-main-courses span,
-.menu .main-courses .menu-item-container .menu-item-desserts span,
-.menu .desserts .menu-item-container .menu-item-starters span,
-.menu .desserts .menu-item-container .menu-item-main-courses span,
-.menu .desserts .menu-item-container .menu-item-desserts span {
+.starters .menu-item-container .menu-item-starters span,
+.starters .menu-item-container .menu-item-main-courses span,
+.starters .menu-item-container .menu-item-desserts span,
+.main-courses .menu-item-container .menu-item-starters span,
+.main-courses .menu-item-container .menu-item-main-courses span,
+.main-courses .menu-item-container .menu-item-desserts span,
+.desserts .menu-item-container .menu-item-starters span,
+.desserts .menu-item-container .menu-item-main-courses span,
+.desserts .menu-item-container .menu-item-desserts span {
   font-family: "title", cursive;
   font-weight: 700;
   font-size: 15px;
@@ -754,15 +718,15 @@ footer ul li i {
   translate: 0 0;
   transition: translate 0.7s ease-in-out;
 }
-.menu .starters .menu-item-container .menu-item-starters .checked,
-.menu .starters .menu-item-container .menu-item-main-courses .checked,
-.menu .starters .menu-item-container .menu-item-desserts .checked,
-.menu .main-courses .menu-item-container .menu-item-starters .checked,
-.menu .main-courses .menu-item-container .menu-item-main-courses .checked,
-.menu .main-courses .menu-item-container .menu-item-desserts .checked,
-.menu .desserts .menu-item-container .menu-item-starters .checked,
-.menu .desserts .menu-item-container .menu-item-main-courses .checked,
-.menu .desserts .menu-item-container .menu-item-desserts .checked {
+.starters .menu-item-container .menu-item-starters .checked,
+.starters .menu-item-container .menu-item-main-courses .checked,
+.starters .menu-item-container .menu-item-desserts .checked,
+.main-courses .menu-item-container .menu-item-starters .checked,
+.main-courses .menu-item-container .menu-item-main-courses .checked,
+.main-courses .menu-item-container .menu-item-desserts .checked,
+.desserts .menu-item-container .menu-item-starters .checked,
+.desserts .menu-item-container .menu-item-main-courses .checked,
+.desserts .menu-item-container .menu-item-desserts .checked {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -776,15 +740,15 @@ footer ul li i {
   translate: 59px 0;
   transition: translate 0.7s ease-in-out;
 }
-.menu .starters .menu-item-container .menu-item-starters .checked i,
-.menu .starters .menu-item-container .menu-item-main-courses .checked i,
-.menu .starters .menu-item-container .menu-item-desserts .checked i,
-.menu .main-courses .menu-item-container .menu-item-starters .checked i,
-.menu .main-courses .menu-item-container .menu-item-main-courses .checked i,
-.menu .main-courses .menu-item-container .menu-item-desserts .checked i,
-.menu .desserts .menu-item-container .menu-item-starters .checked i,
-.menu .desserts .menu-item-container .menu-item-main-courses .checked i,
-.menu .desserts .menu-item-container .menu-item-desserts .checked i {
+.starters .menu-item-container .menu-item-starters .checked i,
+.starters .menu-item-container .menu-item-main-courses .checked i,
+.starters .menu-item-container .menu-item-desserts .checked i,
+.main-courses .menu-item-container .menu-item-starters .checked i,
+.main-courses .menu-item-container .menu-item-main-courses .checked i,
+.main-courses .menu-item-container .menu-item-desserts .checked i,
+.desserts .menu-item-container .menu-item-starters .checked i,
+.desserts .menu-item-container .menu-item-main-courses .checked i,
+.desserts .menu-item-container .menu-item-desserts .checked i {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -795,34 +759,35 @@ footer ul li i {
   background: white;
   border-radius: 50%;
 }
-.menu .starters .menu-item-container .menu-item-starters:hover span,
-.menu .starters .menu-item-container .menu-item-main-courses:hover span,
-.menu .starters .menu-item-container .menu-item-desserts:hover span,
-.menu .main-courses .menu-item-container .menu-item-starters:hover span,
-.menu .main-courses .menu-item-container .menu-item-main-courses:hover span,
-.menu .main-courses .menu-item-container .menu-item-desserts:hover span,
-.menu .desserts .menu-item-container .menu-item-starters:hover span,
-.menu .desserts .menu-item-container .menu-item-main-courses:hover span,
-.menu .desserts .menu-item-container .menu-item-desserts:hover span {
+.starters .menu-item-container .menu-item-starters:hover span,
+.starters .menu-item-container .menu-item-main-courses:hover span,
+.starters .menu-item-container .menu-item-desserts:hover span,
+.main-courses .menu-item-container .menu-item-starters:hover span,
+.main-courses .menu-item-container .menu-item-main-courses:hover span,
+.main-courses .menu-item-container .menu-item-desserts:hover span,
+.desserts .menu-item-container .menu-item-starters:hover span,
+.desserts .menu-item-container .menu-item-main-courses:hover span,
+.desserts .menu-item-container .menu-item-desserts:hover span {
   translate: -77px 0;
 }
-.menu .starters .menu-item-container .menu-item-starters:hover .checked,
-.menu .starters .menu-item-container .menu-item-main-courses:hover .checked,
-.menu .starters .menu-item-container .menu-item-desserts:hover .checked,
-.menu .main-courses .menu-item-container .menu-item-starters:hover .checked,
-.menu .main-courses .menu-item-container .menu-item-main-courses:hover .checked,
-.menu .main-courses .menu-item-container .menu-item-desserts:hover .checked,
-.menu .desserts .menu-item-container .menu-item-starters:hover .checked,
-.menu .desserts .menu-item-container .menu-item-main-courses:hover .checked,
-.menu .desserts .menu-item-container .menu-item-desserts:hover .checked {
+.starters .menu-item-container .menu-item-starters:hover .checked,
+.starters .menu-item-container .menu-item-main-courses:hover .checked,
+.starters .menu-item-container .menu-item-desserts:hover .checked,
+.main-courses .menu-item-container .menu-item-starters:hover .checked,
+.main-courses .menu-item-container .menu-item-main-courses:hover .checked,
+.main-courses .menu-item-container .menu-item-desserts:hover .checked,
+.desserts .menu-item-container .menu-item-starters:hover .checked,
+.desserts .menu-item-container .menu-item-main-courses:hover .checked,
+.desserts .menu-item-container .menu-item-desserts:hover .checked {
   translate: 0 0;
 }
-.menu .btn-commander-container {
+
+.btn-commander-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.menu .btn-commander-container button {
+.btn-commander-container button {
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
@@ -834,7 +799,7 @@ footer ul li i {
   border: none;
   cursor: pointer;
 }
-.menu .btn-commander-container button:hover {
+.btn-commander-container button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
 }
 

@@ -74,49 +74,26 @@
                 .heart-container {
                     position: relative;
 
-                    input[type="checkbox"] {
-                        clear: both;
+                    &:hover {
+                        .heart-empty {
+                            display: none;
+                        }
+
+                        .heart-full {
+                            display: block;
+
+                            img {
+                                width: 1.45rem;
+                            }
+                        }
+                    }
+
+                    .heart-empty {
+                        font-size: 1.4rem;
+                    }
+
+                    .heart-full {
                         display: none;
-                    }
-
-                    label {
-                        position: relative;
-                        display: grid;
-                        width: 21px;
-                        height: 22px;
-                        cursor: pointer;
-
-                        .fa-regular {
-                            position: absolute;
-                            z-index: 2;
-                            font-size: 22px;
-                        }
-
-                        .fa-solid {
-                            position: absolute;
-                            z-index: 1;
-                            font-size: 22px;
-                            color: transparent;
-                            background-clip: text;
-                            -webkit-background-clip: text;
-                            background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-                            transform: scale(0);
-                            transition: .6s ease-in-out;
-                        }
-                    }
-
-
-
-
-                    input[type="checkbox"]:checked+label {
-                        .fa-solid {
-                            font-size: 22px;
-                            color: transparent;
-                            background-clip: text;
-                            -webkit-background-clip: text;
-                            background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-                            transform: scale(0.86, 0.9);
-                        }
                     }
                 }
 
