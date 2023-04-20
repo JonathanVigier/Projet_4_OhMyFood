@@ -1,3 +1,23 @@
+@font-face {
+  font-family: "title";
+  src: url("../assets/fonts/Shrikhand/Shrikhand-Regular.ttf");
+}
+@font-face {
+  font-family: "text-300";
+  src: url("../assets/fonts/Roboto/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "text-400";
+  src: url("../assets/fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "text-500";
+  src: url("../assets/fonts/Roboto/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: "text-700";
+  src: url("../assets/fonts/Roboto/Roboto-Bold.ttf");
+}
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +28,7 @@ body {
   max-width: 1440px;
   min-height: 100vh;
   margin: 0 auto;
+  font-family: "Roboto", sans-serif;
   overflow: hidden;
   animation: bodyLoadingAnim 5.5s ease forwards;
 }
@@ -188,7 +209,6 @@ header nav img {
   align-self: end;
   width: 73%;
   height: 68px;
-  font-family: "title", cursive;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -854,30 +874,30 @@ footer ul li i {
     justify-content: center;
   }
   .menu .starters,
-  .menu .main-courses,
-  .menu .desserts {
+.menu .main-courses,
+.menu .desserts {
     width: 634px;
   }
   .menu .starters .menu-item-container .menu-item-starters .item-infos h3,
-  .menu .starters .menu-item-container .menu-item-main-courses .item-infos h3,
-  .menu .starters .menu-item-container .menu-item-desserts .item-infos h3,
-  .menu .main-courses .menu-item-container .menu-item-starters .item-infos h3,
-  .menu .main-courses .menu-item-container .menu-item-main-courses .item-infos h3,
-  .menu .main-courses .menu-item-container .menu-item-desserts .item-infos h3,
-  .menu .desserts .menu-item-container .menu-item-starters .item-infos h3,
-  .menu .desserts .menu-item-container .menu-item-main-courses .item-infos h3,
-  .menu .desserts .menu-item-container .menu-item-desserts .item-infos h3 {
+.menu .starters .menu-item-container .menu-item-main-courses .item-infos h3,
+.menu .starters .menu-item-container .menu-item-desserts .item-infos h3,
+.menu .main-courses .menu-item-container .menu-item-starters .item-infos h3,
+.menu .main-courses .menu-item-container .menu-item-main-courses .item-infos h3,
+.menu .main-courses .menu-item-container .menu-item-desserts .item-infos h3,
+.menu .desserts .menu-item-container .menu-item-starters .item-infos h3,
+.menu .desserts .menu-item-container .menu-item-main-courses .item-infos h3,
+.menu .desserts .menu-item-container .menu-item-desserts .item-infos h3 {
     overflow: visible;
   }
   .menu .starters .menu-item-container .menu-item-starters .item-infos p,
-  .menu .starters .menu-item-container .menu-item-main-courses .item-infos p,
-  .menu .starters .menu-item-container .menu-item-desserts .item-infos p,
-  .menu .main-courses .menu-item-container .menu-item-starters .item-infos p,
-  .menu .main-courses .menu-item-container .menu-item-main-courses .item-infos p,
-  .menu .main-courses .menu-item-container .menu-item-desserts .item-infos p,
-  .menu .desserts .menu-item-container .menu-item-starters .item-infos p,
-  .menu .desserts .menu-item-container .menu-item-main-courses .item-infos p,
-  .menu .desserts .menu-item-container .menu-item-desserts .item-infos p {
+.menu .starters .menu-item-container .menu-item-main-courses .item-infos p,
+.menu .starters .menu-item-container .menu-item-desserts .item-infos p,
+.menu .main-courses .menu-item-container .menu-item-starters .item-infos p,
+.menu .main-courses .menu-item-container .menu-item-main-courses .item-infos p,
+.menu .main-courses .menu-item-container .menu-item-desserts .item-infos p,
+.menu .desserts .menu-item-container .menu-item-starters .item-infos p,
+.menu .desserts .menu-item-container .menu-item-main-courses .item-infos p,
+.menu .desserts .menu-item-container .menu-item-desserts .item-infos p {
     overflow: visible;
   }
 }
