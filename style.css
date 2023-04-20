@@ -535,10 +535,29 @@ footer ul li i {
 .menu-bg-container {
   height: 275px;
 }
-.menu-bg-container img {
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
+.menu-bg-container .palette {
+  height: 100%;
+  background: url("../../assets/images/restaurants/la-palette-du-gout.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.menu-bg-container .note {
+  height: 100%;
+  background: url("../../assets/images/restaurants/la-note-enchantee.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.menu-bg-container .francaise {
+  height: 100%;
+  background: url("../../assets/images/restaurants/a-la-francaise.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.menu-bg-container .delice {
+  height: 100%;
+  background: url("../../assets/images/restaurants/le-delice-des-sens.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .menu {
