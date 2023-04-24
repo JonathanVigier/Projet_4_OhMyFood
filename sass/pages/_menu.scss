@@ -79,27 +79,43 @@
 
             .heart-container {
                 position: relative;
+                width: 50px;
+                height: 50px;
 
                 &:hover {
                     .heart-empty {
-                        display: none;
+                        transform: scale(0);
+                        opacity: 0;
                     }
 
                     .heart-full {
-                        display: block;
-
-                        img {
-                            width: 1.45rem;
-                        }
+                        transform: scale(1);
+                        opacity: 1;
                     }
                 }
 
                 .heart-empty {
+                    position: absolute;
+                    top: 20%;
+                    left: 0;
                     font-size: 1.4rem;
+                    transform: scale(1);
+                    opacity: 1;
+                    transition: .8s ease-in-out;
                 }
 
                 .heart-full {
-                    display: none;
+                    display: block;
+                    top: 20%;
+                    position: absolute;
+                    left: 0;
+                    transform: scale(0);
+                    opacity: 0;
+                    transition: .6s ease-in-out;
+
+                    img {
+                        width: 1.45rem;
+                    }
                 }
             }
         }
@@ -189,7 +205,7 @@
                 font-size: 15px;
                 line-height: 18px;
                 translate: 0 0;
-                transition: translate .7s ease-in-out;
+                transition: translate .5s ease-in-out;
             }
 
             .checked {
@@ -204,7 +220,7 @@
                 background: #99E2D0;
                 border-radius: 0 15px 15px 0;
                 translate: 59px 0;
-                transition: translate .7s ease-in-out;
+                transition: translate .5s ease-in-out;
 
                 i {
                     display: flex;
@@ -216,6 +232,7 @@
                     color: #99E2D0;
                     background: white;
                     border-radius: 50%;
+                    transition: rotate .5s .3s ease-in-out;
                 }
             }
 
@@ -227,6 +244,10 @@
 
                 .checked {
                     translate: 0 0;
+
+                    i {
+                        transform: rotateY(360deg);
+                    }
                 }
             }
         }

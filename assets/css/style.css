@@ -251,9 +251,10 @@ header nav img {
   height: 50px;
   border: none;
   cursor: pointer;
+  transition: 0.5s ease-in-out;
 }
 .research .research-content a:hover {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  filter: brightness(1.1);
 }
 
 .functioning {
@@ -418,21 +419,35 @@ header nav img {
 }
 .restaurants .restaurants-content .card .card-content .heart-container {
   position: relative;
+  width: 50px;
+  height: 50px;
 }
 .restaurants .restaurants-content .card .card-content .heart-container:hover .heart-empty {
-  display: none;
+  transform: scale(0);
+  opacity: 0;
 }
 .restaurants .restaurants-content .card .card-content .heart-container:hover .heart-full {
-  display: block;
-}
-.restaurants .restaurants-content .card .card-content .heart-container:hover .heart-full img {
-  width: 1.45rem;
+  transform: scale(1);
+  opacity: 1;
 }
 .restaurants .restaurants-content .card .card-content .heart-container .heart-empty {
+  position: absolute;
+  left: 0;
   font-size: 1.4rem;
+  transform: scale(1);
+  opacity: 1;
+  transition: 0.8s ease-in-out;
 }
 .restaurants .restaurants-content .card .card-content .heart-container .heart-full {
-  display: none;
+  display: block;
+  position: absolute;
+  left: 0;
+  transform: scale(0);
+  opacity: 0;
+  transition: 0.6s ease-in-out;
+}
+.restaurants .restaurants-content .card .card-content .heart-container .heart-full img {
+  width: 1.45rem;
 }
 
 /*  Media query Tablette (min-width: 768px) */
@@ -461,7 +476,7 @@ header nav img {
   }
 }
 footer {
-  height: 197px;
+  height: 114px;
   padding: 22px 0 33px 25px;
   background: #353535;
 }
@@ -500,13 +515,13 @@ footer ul li i {
   footer {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-    padding: 22px 25px 33px 0;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 22px 45px 33px 25px;
     gap: 30px;
   }
   footer h4 {
-    margin: 0;
+    margin: 0 65px 0 85px;
   }
   footer ul {
     flex-direction: row;
@@ -590,21 +605,37 @@ footer ul li i {
 }
 .menu .menu-section .menu-title .heart-container {
   position: relative;
+  width: 50px;
+  height: 50px;
 }
 .menu .menu-section .menu-title .heart-container:hover .heart-empty {
-  display: none;
+  transform: scale(0);
+  opacity: 0;
 }
 .menu .menu-section .menu-title .heart-container:hover .heart-full {
-  display: block;
-}
-.menu .menu-section .menu-title .heart-container:hover .heart-full img {
-  width: 1.45rem;
+  transform: scale(1);
+  opacity: 1;
 }
 .menu .menu-section .menu-title .heart-container .heart-empty {
+  position: absolute;
+  top: 20%;
+  left: 0;
   font-size: 1.4rem;
+  transform: scale(1);
+  opacity: 1;
+  transition: 0.8s ease-in-out;
 }
 .menu .menu-section .menu-title .heart-container .heart-full {
-  display: none;
+  display: block;
+  top: 20%;
+  position: absolute;
+  left: 0;
+  transform: scale(0);
+  opacity: 0;
+  transition: 0.6s ease-in-out;
+}
+.menu .menu-section .menu-title .heart-container .heart-full img {
+  width: 1.45rem;
 }
 
 .starters {
@@ -734,7 +765,7 @@ footer ul li i {
   font-size: 15px;
   line-height: 18px;
   translate: 0 0;
-  transition: translate 0.7s ease-in-out;
+  transition: translate 0.5s ease-in-out;
 }
 .starters .menu-item-container .menu-item-starters .checked,
 .starters .menu-item-container .menu-item-main-courses .checked,
@@ -756,7 +787,7 @@ footer ul li i {
   background: #99E2D0;
   border-radius: 0 15px 15px 0;
   translate: 59px 0;
-  transition: translate 0.7s ease-in-out;
+  transition: translate 0.5s ease-in-out;
 }
 .starters .menu-item-container .menu-item-starters .checked i,
 .starters .menu-item-container .menu-item-main-courses .checked i,
@@ -776,6 +807,7 @@ footer ul li i {
   color: #99E2D0;
   background: white;
   border-radius: 50%;
+  transition: rotate 0.5s 0.3s ease-in-out;
 }
 .starters .menu-item-container .menu-item-starters:hover span,
 .starters .menu-item-container .menu-item-main-courses:hover span,
@@ -798,6 +830,17 @@ footer ul li i {
 .desserts .menu-item-container .menu-item-main-courses:hover .checked,
 .desserts .menu-item-container .menu-item-desserts:hover .checked {
   translate: 0 0;
+}
+.starters .menu-item-container .menu-item-starters:hover .checked i,
+.starters .menu-item-container .menu-item-main-courses:hover .checked i,
+.starters .menu-item-container .menu-item-desserts:hover .checked i,
+.main-courses .menu-item-container .menu-item-starters:hover .checked i,
+.main-courses .menu-item-container .menu-item-main-courses:hover .checked i,
+.main-courses .menu-item-container .menu-item-desserts:hover .checked i,
+.desserts .menu-item-container .menu-item-starters:hover .checked i,
+.desserts .menu-item-container .menu-item-main-courses:hover .checked i,
+.desserts .menu-item-container .menu-item-desserts:hover .checked i {
+  transform: rotateY(360deg);
 }
 
 .btn-commander-container {

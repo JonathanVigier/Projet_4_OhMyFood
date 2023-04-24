@@ -74,10 +74,11 @@
             height: 50px;
             border: none;
             cursor: pointer;
-
+            transition: .5s ease-in-out;
 
             &:hover {
-                background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+                filter: brightness(1.1);
+                // background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
             }
         }
     }

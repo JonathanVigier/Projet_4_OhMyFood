@@ -73,27 +73,41 @@
 
                 .heart-container {
                     position: relative;
+                    width: 50px;
+                    height: 50px;
 
                     &:hover {
                         .heart-empty {
-                            display: none;
+                            transform: scale(0);
+                            opacity: 0;
                         }
 
                         .heart-full {
-                            display: block;
-
-                            img {
-                                width: 1.45rem;
-                            }
+                            transform: scale(1);
+                            opacity: 1;
                         }
                     }
 
                     .heart-empty {
+                        position: absolute;
+                        left: 0;
                         font-size: 1.4rem;
+                        transform: scale(1);
+                        opacity: 1;
+                        transition: .8s ease-in-out;
                     }
 
                     .heart-full {
-                        display: none;
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        transform: scale(0);
+                        opacity: 0;
+                        transition: .6s ease-in-out;
+
+                        img {
+                            width: 1.45rem;
+                        }
                     }
                 }
 
