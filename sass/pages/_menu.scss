@@ -56,7 +56,7 @@
     flex-direction: column;
     gap: 40px;
     position: relative;
-    margin-top: -40px;
+    margin-top: -12vh;
     max-width: 1055px;
     padding: 32px 0 40px 0;
     background: #F7F7F7;
@@ -71,7 +71,8 @@
         .menu-title {
             display: flex;
             align-items: center;
-            gap: 35px;
+            justify-content: center;
+            gap: 10%;
 
             h1 {
                 @include menu-page-title;
@@ -184,18 +185,20 @@
 
                 h3 {
                     @include ingredient-title;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    width: 125px;
+                    width: 250px;
+                    // text-overflow: ellipsis;
+                    // white-space: nowrap;
+                    // overflow: hidden;
+                    // width: 125px;
                 }
 
                 p {
                     @include ingredient-subtitle;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    width: 125px;
+                    width: 250px;
+                    // text-overflow: ellipsis;
+                    // white-space: nowrap;
+                    // overflow: hidden;
+                    // width: 125px;
                 }
             }
 
@@ -232,11 +235,17 @@
                     color: #99E2D0;
                     background: white;
                     border-radius: 50%;
-                    transition: rotate .5s .3s ease-in-out;
                 }
             }
 
             &:hover {
+                .item-infos {
+
+                    h3,
+                    p {
+                        animation: ellipsisText .5s forwards;
+                    }
+                }
 
                 span {
                     translate: -77px 0;
@@ -246,7 +255,7 @@
                     translate: 0 0;
 
                     i {
-                        transform: rotateY(360deg);
+                        animation: rotateCheckMark 0.5s .2s forwards;
                     }
                 }
             }
@@ -282,17 +291,45 @@
     }
 }
 
-@media screen and (max-width: 768px) {
-    .menu {
-        margin-top: -12vh;
+@keyframes ellipsisText {
+    to {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 135px;
+    }
+}
 
-        .menu-section {
-            .menu-title {
-                justify-content: center;
-                gap: 10%;
+@keyframes rotateCheckMark {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .starters,
+    .main-courses,
+    .desserts {
+        .menu-item-container {
+
+            .menu-item-starters,
+            .menu-item-main-courses,
+            .menu-item-desserts {
+                &:hover {
+
+                    .item-infos {
+
+                        h3,
+                        p {
+                            animation: none;
+                        }
+                    }
+                }
             }
         }
     }
+
 }
 
 /*  Media query Desktop (min-width: 1024px) */
@@ -328,24 +365,6 @@
         .desserts {
 
             width: 634px;
-
-            .menu-item-container {
-
-                .menu-item-starters,
-                .menu-item-main-courses,
-                .menu-item-desserts {
-
-                    .item-infos {
-                        h3 {
-                            overflow: visible;
-                        }
-
-                        p {
-                            overflow: visible;
-                        }
-                    }
-                }
-            }
 
         }
 

@@ -4,7 +4,7 @@
   "description": "projet 4 de la formation Intégrateur web OpenClassrooms",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss style.css"
+    "sass": "sass --watch ./sass/main.scss ./assets/css/style.css"
   },
   "repository": {
     "type": "git",

@@ -579,7 +579,7 @@ footer ul li i {
   flex-direction: column;
   gap: 40px;
   position: relative;
-  margin-top: -40px;
+  margin-top: -12vh;
   max-width: 1055px;
   padding: 32px 0 40px 0;
   background: #F7F7F7;
@@ -594,7 +594,8 @@ footer ul li i {
 .menu .menu-section .menu-title {
   display: flex;
   align-items: center;
-  gap: 35px;
+  justify-content: center;
+  gap: 10%;
 }
 .menu .menu-section .menu-title h1 {
   font-family: "title", sans-serif;
@@ -729,10 +730,7 @@ footer ul li i {
   font-size: 18px;
   line-height: 21px;
   font-weight: 500;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 125px;
+  width: 250px;
 }
 .starters .menu-item-container .menu-item-starters .item-infos p,
 .starters .menu-item-container .menu-item-main-courses .item-infos p,
@@ -746,10 +744,7 @@ footer ul li i {
   font-family: "text-300", serif;
   font-size: 15px;
   line-height: 18px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 125px;
+  width: 250px;
 }
 .starters .menu-item-container .menu-item-starters span,
 .starters .menu-item-container .menu-item-main-courses span,
@@ -807,7 +802,26 @@ footer ul li i {
   color: #99E2D0;
   background: white;
   border-radius: 50%;
-  transition: rotate 0.5s 0.3s ease-in-out;
+}
+.starters .menu-item-container .menu-item-starters:hover .item-infos h3,
+.starters .menu-item-container .menu-item-starters:hover .item-infos p,
+.starters .menu-item-container .menu-item-main-courses:hover .item-infos h3,
+.starters .menu-item-container .menu-item-main-courses:hover .item-infos p,
+.starters .menu-item-container .menu-item-desserts:hover .item-infos h3,
+.starters .menu-item-container .menu-item-desserts:hover .item-infos p,
+.main-courses .menu-item-container .menu-item-starters:hover .item-infos h3,
+.main-courses .menu-item-container .menu-item-starters:hover .item-infos p,
+.main-courses .menu-item-container .menu-item-main-courses:hover .item-infos h3,
+.main-courses .menu-item-container .menu-item-main-courses:hover .item-infos p,
+.main-courses .menu-item-container .menu-item-desserts:hover .item-infos h3,
+.main-courses .menu-item-container .menu-item-desserts:hover .item-infos p,
+.desserts .menu-item-container .menu-item-starters:hover .item-infos h3,
+.desserts .menu-item-container .menu-item-starters:hover .item-infos p,
+.desserts .menu-item-container .menu-item-main-courses:hover .item-infos h3,
+.desserts .menu-item-container .menu-item-main-courses:hover .item-infos p,
+.desserts .menu-item-container .menu-item-desserts:hover .item-infos h3,
+.desserts .menu-item-container .menu-item-desserts:hover .item-infos p {
+  animation: ellipsisText 0.5s forwards;
 }
 .starters .menu-item-container .menu-item-starters:hover span,
 .starters .menu-item-container .menu-item-main-courses:hover span,
@@ -840,7 +854,7 @@ footer ul li i {
 .desserts .menu-item-container .menu-item-starters:hover .checked i,
 .desserts .menu-item-container .menu-item-main-courses:hover .checked i,
 .desserts .menu-item-container .menu-item-desserts:hover .checked i {
-  transform: rotateY(360deg);
+  animation: rotateCheckMark 0.5s 0.2s forwards;
 }
 
 .btn-commander-container {
@@ -869,13 +883,39 @@ footer ul li i {
     opacity: 1;
   }
 }
-@media screen and (max-width: 768px) {
-  .menu {
-    margin-top: -12vh;
+@keyframes ellipsisText {
+  to {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 135px;
   }
-  .menu .menu-section .menu-title {
-    justify-content: center;
-    gap: 10%;
+}
+@keyframes rotateCheckMark {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .starters .menu-item-container .menu-item-starters:hover .item-infos h3,
+.starters .menu-item-container .menu-item-starters:hover .item-infos p,
+.starters .menu-item-container .menu-item-main-courses:hover .item-infos h3,
+.starters .menu-item-container .menu-item-main-courses:hover .item-infos p,
+.starters .menu-item-container .menu-item-desserts:hover .item-infos h3,
+.starters .menu-item-container .menu-item-desserts:hover .item-infos p,
+.main-courses .menu-item-container .menu-item-starters:hover .item-infos h3,
+.main-courses .menu-item-container .menu-item-starters:hover .item-infos p,
+.main-courses .menu-item-container .menu-item-main-courses:hover .item-infos h3,
+.main-courses .menu-item-container .menu-item-main-courses:hover .item-infos p,
+.main-courses .menu-item-container .menu-item-desserts:hover .item-infos h3,
+.main-courses .menu-item-container .menu-item-desserts:hover .item-infos p,
+.desserts .menu-item-container .menu-item-starters:hover .item-infos h3,
+.desserts .menu-item-container .menu-item-starters:hover .item-infos p,
+.desserts .menu-item-container .menu-item-main-courses:hover .item-infos h3,
+.desserts .menu-item-container .menu-item-main-courses:hover .item-infos p,
+.desserts .menu-item-container .menu-item-desserts:hover .item-infos h3,
+.desserts .menu-item-container .menu-item-desserts:hover .item-infos p {
+    animation: none;
   }
 }
 /*  Media query Desktop (min-width: 1024px) */
@@ -903,28 +943,6 @@ footer ul li i {
 .menu .main-courses,
 .menu .desserts {
     width: 634px;
-  }
-  .menu .starters .menu-item-container .menu-item-starters .item-infos h3,
-.menu .starters .menu-item-container .menu-item-main-courses .item-infos h3,
-.menu .starters .menu-item-container .menu-item-desserts .item-infos h3,
-.menu .main-courses .menu-item-container .menu-item-starters .item-infos h3,
-.menu .main-courses .menu-item-container .menu-item-main-courses .item-infos h3,
-.menu .main-courses .menu-item-container .menu-item-desserts .item-infos h3,
-.menu .desserts .menu-item-container .menu-item-starters .item-infos h3,
-.menu .desserts .menu-item-container .menu-item-main-courses .item-infos h3,
-.menu .desserts .menu-item-container .menu-item-desserts .item-infos h3 {
-    overflow: visible;
-  }
-  .menu .starters .menu-item-container .menu-item-starters .item-infos p,
-.menu .starters .menu-item-container .menu-item-main-courses .item-infos p,
-.menu .starters .menu-item-container .menu-item-desserts .item-infos p,
-.menu .main-courses .menu-item-container .menu-item-starters .item-infos p,
-.menu .main-courses .menu-item-container .menu-item-main-courses .item-infos p,
-.menu .main-courses .menu-item-container .menu-item-desserts .item-infos p,
-.menu .desserts .menu-item-container .menu-item-starters .item-infos p,
-.menu .desserts .menu-item-container .menu-item-main-courses .item-infos p,
-.menu .desserts .menu-item-container .menu-item-desserts .item-infos p {
-    overflow: visible;
   }
 }
 
