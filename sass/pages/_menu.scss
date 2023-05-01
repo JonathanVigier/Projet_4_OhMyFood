@@ -1,3 +1,5 @@
+@import "../utils/mixins";
+
 .nav {
     justify-content: flex-start;
     padding: 0 0 0 23px;
@@ -124,15 +126,15 @@
 }
 
 .starters {
-    animation: menuAnim 2s 1s ease forwards;
+    animation: menuAnim 2s .5s ease forwards;
 }
 
 .main-courses {
-    animation: menuAnim 2s 2.5s ease forwards;
+    animation: menuAnim 2s 1.5s ease forwards;
 }
 
 .desserts {
-    animation: menuAnim 2s 4s ease forwards;
+    animation: menuAnim 2s 3s ease forwards;
 }
 
 .starters,
@@ -143,13 +145,11 @@
     opacity: 0;
 
     h2 {
+        @include ingredient-subtitle;
         position: relative;
-        font-family: 'Roboto', sans-serif;
         font-weight: 300;
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 19px;
         text-transform: uppercase;
+        font-size: 1rem;
 
         &::after {
             position: absolute;
@@ -181,11 +181,12 @@
 
             .item-infos {
                 display: grid;
+                width: 100%;
                 gap: 6px;
 
                 h3 {
                     @include ingredient-title;
-                    width: 250px;
+                    // width: 250px;
                     // text-overflow: ellipsis;
                     // white-space: nowrap;
                     // overflow: hidden;
@@ -194,7 +195,7 @@
 
                 p {
                     @include ingredient-subtitle;
-                    width: 250px;
+                    // width: 250px;
                     // text-overflow: ellipsis;
                     // white-space: nowrap;
                     // overflow: hidden;
@@ -203,7 +204,6 @@
             }
 
             span {
-                font-family: "title", cursive;
                 font-weight: 700;
                 font-size: 15px;
                 line-height: 18px;
@@ -241,14 +241,13 @@
             &:hover {
                 .item-infos {
 
-                    h3,
                     p {
-                        animation: ellipsisText .5s forwards;
+                        animation: ellipsisIngredientSubtitle .5s ease-in-out forwards;
                     }
                 }
 
                 span {
-                    translate: -77px 0;
+                    translate: -59px 0;
                 }
 
                 .checked {
@@ -277,9 +276,11 @@
         padding: 13px 16px;
         border: none;
         cursor: pointer;
+        transition: .5s ease-in-out;
 
         &:hover {
-            background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+            filter: brightness(1.1);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.35);
         }
     }
 }
@@ -291,12 +292,12 @@
     }
 }
 
-@keyframes ellipsisText {
+@keyframes ellipsisIngredientSubtitle {
     to {
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
-        width: 135px;
+        max-width: calc(100% - 60px);
     }
 }
 
@@ -308,6 +309,16 @@
 
 @media screen and (min-width: 768px) {
 
+    .menu {
+        .menu-section {
+            .menu-title {
+                h1 {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+
     .starters,
     .main-courses,
     .desserts {
@@ -316,6 +327,16 @@
             .menu-item-starters,
             .menu-item-main-courses,
             .menu-item-desserts {
+                .item-infos {
+                    h3 {
+                        font-size: 1rem;
+                    }
+
+                    p {
+                        font-size: 0.8rem;
+                    }
+                }
+
                 &:hover {
 
                     .item-infos {

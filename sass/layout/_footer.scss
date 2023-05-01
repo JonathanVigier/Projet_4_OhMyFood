@@ -1,5 +1,4 @@
 footer {
-    height: 114px;
     padding: 22px 0 33px 25px;
     background: #353535;
 
@@ -39,6 +38,16 @@ footer {
 /*  Media query Tablette (max-width: 768px) */
 
 @media screen and (min-width: 768px) {
+    .menu {
+        .menu-section {
+            .menu-title {
+                h1 {
+                    min-width: 300px;
+                }
+            }
+        }
+    }
+
     footer {
         display: flex;
         flex-direction: row-reverse;
@@ -48,7 +57,7 @@ footer {
         gap: 30px;
 
         h4 {
-            margin: 0 65px 0 85px;
+            margin: 0 15px 0 85px;
         }
 
         ul {

@@ -59,15 +59,13 @@
         }
 
         a {
+            @include btn;
             display: flex;
             justify-content: center;
             align-items: center;
             align-self: center;
             justify-self: center;
             max-width: 218px;
-            @include btn;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 500;
             font-size: 16px;
             color: white;
             width: 100%;
@@ -78,7 +76,7 @@
 
             &:hover {
                 filter: brightness(1.1);
-                // background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.35);
             }
         }
     }

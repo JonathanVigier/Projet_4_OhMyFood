@@ -1,31 +1,31 @@
 @font-face {
     font-family: 'title';
-    src: url('../assets/fonts/Shrikhand/Shrikhand-Regular.ttf');
+    src: url('../fonts/Shrikhand/Shrikhand-Regular.ttf');
 }
 
 @font-face {
     font-family: 'text-300';
-    src: url('../assets/fonts/Roboto/Roboto-Light.ttf');
+    src: url('../fonts/Roboto/Roboto-Light.ttf');
 }
 
 @font-face {
     font-family: 'text-400';
-    src: url('../assets/fonts/Roboto/Roboto-Regular.ttf');
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
 }
 
 
 @font-face {
     font-family: 'text-500';
-    src: url('../assets/fonts/Roboto/Roboto-Medium.ttf');
+    src: url('../fonts/Roboto/Roboto-Medium.ttf');
 }
 
 @font-face {
     font-family: 'text-700';
-    src: url('../assets/fonts/Roboto/Roboto-Bold.ttf');
+    src: url('../fonts/Roboto/Roboto-Bold.ttf');
 }
 
-$title: 'title', sans-serif;
-$text300: 'text-300', serif;
-$text400: 'text-400', serif;
-$text500: 'text-500', serif;
-$text700: 'text-700', serif;
+$title: 'title', serif;
+$text300: 'text-300', sans-serif;
+$text400: 'text-400', sans-serif;
+$text500: 'text-500', sans-serif;
+$text700: 'text-700', sans-serif;

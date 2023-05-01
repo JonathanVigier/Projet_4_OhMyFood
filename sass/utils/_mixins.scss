@@ -13,21 +13,20 @@
 @mixin menu-page-title {
     font-family: $title;
     font-style: italic;
-    font-size: 28px;
+    font-size: 1.4rem;
     line-height: 41px;
     color: #101010;
 }
 
 @mixin ingredient-title {
     font-family: $text500;
-    font-size: 18px;
+    font-size: 0.9rem;
     line-height: 21px;
-    font-weight: 500;
 }
 
 @mixin ingredient-subtitle {
     font-family: $text300;
-    font-size: 15px;
+    font-size: 0.8rem;
     line-height: 18px;
 }
 
