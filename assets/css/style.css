@@ -618,15 +618,15 @@ footer ul li i {
 }
 
 .starters {
-  animation: menuAnim 2s 0.5s ease forwards;
+  animation: menuAnim 1s 0.5s ease forwards;
 }
 
 .main-courses {
-  animation: menuAnim 2s 1.5s ease forwards;
+  animation: menuAnim 1s 1.5s ease forwards;
 }
 
 .desserts {
-  animation: menuAnim 2s 3s ease forwards;
+  animation: menuAnim 1s 3s ease forwards;
 }
 
 .starters,

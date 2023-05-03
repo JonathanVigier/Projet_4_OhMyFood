@@ -126,15 +126,15 @@
 }
 
 .starters {
-    animation: menuAnim 2s .5s ease forwards;
+    animation: menuAnim 1s .5s ease forwards;
 }
 
 .main-courses {
-    animation: menuAnim 2s 1.5s ease forwards;
+    animation: menuAnim 1s 1.5s ease forwards;
 }
 
 .desserts {
-    animation: menuAnim 2s 3s ease forwards;
+    animation: menuAnim 1s 3s ease forwards;
 }
 
 .starters,
@@ -186,20 +186,10 @@
 
                 h3 {
                     @include ingredient-title;
-                    // width: 250px;
-                    // text-overflow: ellipsis;
-                    // white-space: nowrap;
-                    // overflow: hidden;
-                    // width: 125px;
                 }
 
                 p {
                     @include ingredient-subtitle;
-                    // width: 250px;
-                    // text-overflow: ellipsis;
-                    // white-space: nowrap;
-                    // overflow: hidden;
-                    // width: 125px;
                 }
             }
 
