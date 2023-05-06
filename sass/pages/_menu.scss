@@ -230,6 +230,9 @@
 
             &:hover {
                 .item-infos {
+                    h3 {
+                        animation: ellipsisIngredientTitle .5s ease-in-out forwards;
+                    }
 
                     p {
                         animation: ellipsisIngredientSubtitle .5s ease-in-out forwards;
@@ -282,6 +285,15 @@
     }
 }
 
+@keyframes ellipsisIngredientTitle {
+    to {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: calc(100% - 30px);
+    }
+}
+
 @keyframes ellipsisIngredientSubtitle {
     to {
         text-overflow: ellipsis;
@@ -302,6 +314,8 @@
     .menu {
         .menu-section {
             .menu-title {
+                gap: 0;
+
                 h1 {
                     font-size: 1.8rem;
                 }

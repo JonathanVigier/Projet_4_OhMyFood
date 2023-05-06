@@ -778,6 +778,17 @@ footer ul li i {
   background: white;
   border-radius: 50%;
 }
+.starters .menu-item-container .menu-item-starters:hover .item-infos h3,
+.starters .menu-item-container .menu-item-main-courses:hover .item-infos h3,
+.starters .menu-item-container .menu-item-desserts:hover .item-infos h3,
+.main-courses .menu-item-container .menu-item-starters:hover .item-infos h3,
+.main-courses .menu-item-container .menu-item-main-courses:hover .item-infos h3,
+.main-courses .menu-item-container .menu-item-desserts:hover .item-infos h3,
+.desserts .menu-item-container .menu-item-starters:hover .item-infos h3,
+.desserts .menu-item-container .menu-item-main-courses:hover .item-infos h3,
+.desserts .menu-item-container .menu-item-desserts:hover .item-infos h3 {
+  animation: ellipsisIngredientTitle 0.5s ease-in-out forwards;
+}
 .starters .menu-item-container .menu-item-starters:hover .item-infos p,
 .starters .menu-item-container .menu-item-main-courses:hover .item-infos p,
 .starters .menu-item-container .menu-item-desserts:hover .item-infos p,
@@ -851,6 +862,14 @@ footer ul li i {
     opacity: 1;
   }
 }
+@keyframes ellipsisIngredientTitle {
+  to {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: calc(100% - 30px);
+  }
+}
 @keyframes ellipsisIngredientSubtitle {
   to {
     text-overflow: ellipsis;
@@ -865,6 +884,9 @@ footer ul li i {
   }
 }
 @media screen and (min-width: 768px) {
+  .menu .menu-section .menu-title {
+    gap: 0;
+  }
   .menu .menu-section .menu-title h1 {
     font-size: 1.8rem;
   }
