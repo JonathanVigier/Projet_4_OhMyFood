@@ -197,8 +197,8 @@
                 font-weight: 700;
                 font-size: 15px;
                 line-height: 18px;
-                translate: 0 0;
-                transition: translate .5s ease-in-out;
+                transform: translate(0, 0);
+                transition: .5s ease-in-out;
             }
 
             .checked {
@@ -212,8 +212,8 @@
                 right: 0;
                 background: #99E2D0;
                 border-radius: 0 15px 15px 0;
-                translate: 59px 0;
-                transition: translate .5s ease-in-out;
+                transform: translate(59px, 0);
+                transition: .5s ease-in-out;
 
                 i {
                     display: flex;
@@ -240,11 +240,11 @@
                 }
 
                 span {
-                    translate: -59px 0;
+                    transform: translate(-59px, 0);
                 }
 
                 .checked {
-                    translate: 0 0;
+                    transform: translate(0, 0);
 
                     i {
                         animation: rotateCheckMark 0.5s .2s forwards;
